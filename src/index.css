@@ -1,0 +1,37 @@
+@import "tailwindcss";
+
+@import "tailwindcss";
+
+/* ===== THEME COLOURS: change these to re-colour the whole site ===== */
+@theme {
+  --color-navy: #0b1030;        /* main background */
+  --color-navy-deep: #070a22;   /* footer + skills strip */
+  --color-accent: #ff4fa3;      /* pink highlights & buttons */
+  --color-accent-dark: #f0388f; /* pink on hover */
+}
+
+html { scroll-behavior: smooth; }
+body { margin: 0; background: #0b1030; }
+
+/* hero background glow */
+.hero-bg {
+  background: radial-gradient(circle at center, #1a2257 0%, #070a22 70%);
+}
+
+/* glow at the bottom of the footer */
+.footer-glow {
+  background: radial-gradient(ellipse at 40% 100%, rgba(255, 79, 163, 0.22), rgba(70, 90, 230, 0.18) 40%, transparent 70%);
+}
+
+/* white → pink → blue gradient headings */
+.text-metal {
+  background: linear-gradient(180deg, #ffffff 0%, #ffd1e8 50%, #a5b0ff 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+@keyframes marquee-left  { from { transform: translateX(0); }    to { transform: translateX(-50%); } }
+@keyframes marquee-right { from { transform: translateX(-50%); } to { transform: translateX(0); } }
+.marquee-left  { animation: marquee-left 40s linear infinite; }
+.marquee-right { animation: marquee-right 40s linear infinite; }
